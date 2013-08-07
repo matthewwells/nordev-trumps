@@ -1,0 +1,29 @@
+<h2><%= plural_table_name.humanize %></h2>
+
+<table class="table table-striped">
+  <tr>
+<% attributes.each do |attribute| -%>
+    <th><%= attribute.human_name %></th>
+<% end -%>
+    <th></th>
+  </tr>
+
+<%% @<%= plural_table_name %>.each do |<%= singular_table_name %>| %>
+  <tr>
+<% attributes.each do |attribute| -%>
+    <td><%%= <%= singular_table_name %>.<%= attribute.name %> %></td>
+<% end -%>
+    <td>
+	    <%%= split_options_dropdown link_to('View', <%= singular_table_name %>, class: 'btn btn-mini') do %>
+            <li><%%= link_to 'Edit', edit_<%= singular_table_name %>_path(<%= singular_table_name %>) %></li>
+            <li class='divider'></li>
+            <li><%%= link_to 'Delete', <%= singular_table_name %>, <%= key_value :method, ":delete" %>, <%= key_value :data, "{ #{key_value :confirm, "'Are you sure?'"} }" %> %></li>
+	    <%% end %>
+	</td>
+  </tr>
+<%% end %>
+</table>
+
+<br />
+
+<%%= link_to 'New <%= human_name %>', new_<%= singular_table_name %>_path, class: 'btn btn-primary' %>

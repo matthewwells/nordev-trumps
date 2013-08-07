@@ -1,0 +1,15 @@
+<div class="well">
+	<%%= form_for(@<%= singular_table_name %>) do |f| %>
+	  <%%= render(:partial => 'shared/errors', :locals => {:subject => @<%= singular_table_name %>}) %>
+	
+	<% attributes.each do |attribute| -%>
+	  <div class="field">
+	    <%%= f.label :<%= attribute.name %> %>
+	    <%%= f.<%= attribute.field_type %> :<%= attribute.name %> %>
+	  </div>
+	<% end -%>
+	  <div class="actions">
+	    <%%= f.submit 'Save <%= human_name %>', class: 'btn btn-primary' %>
+	  </div>
+	<%% end %>
+</div>

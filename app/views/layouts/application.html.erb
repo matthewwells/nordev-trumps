@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Meetmy Town Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Matthew Wells">
+
+  <%= stylesheet_link_tag "application", :media => "all" %>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons 
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="../assets/ico/favicon.png">
+	-->
+<!-- START:stylesheet -->
+  <%= csrf_meta_tags %>
+<!-- END:stylesheet -->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="icon" href="<%= root_url %>/favicon.ico" type="image/x-icon" />
+  </head>
+
+  <body>
+  	<%= render :partial => "shared/header" %>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span2">
+		  	<%= render :partial => "shared/left_menu" %>
+        </div><!--/span-->
+        <div class="<%= content_for?(:rightbar) ? 'span7' : 'span10' %>">
+		  	<%= render :partial => "layouts/messages" %>
+	        <%= yield :layout %>
+        </div><!--/span-->
+		<% if content_for?(:rightbar) %>
+		<div class="span3 well">
+			<%= yield :rightbar %>
+		</div>
+		<% end %>
+      </div><!--/row-->
+  	<%= render :partial => "shared/footer" %>
+    </div><!--/.fluid-container-->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <%= javascript_include_tag "application" %>
+  </body>
+</html>

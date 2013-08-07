@@ -1,0 +1,11 @@
+<div class="btn-group">
+    <%= main_link %>
+<% if !body.empty? %>
+  <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown">
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu pull-right">
+    <%= body %>
+  </ul>
+<% end %>
+</div>

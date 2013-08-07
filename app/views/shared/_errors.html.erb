@@ -1,0 +1,12 @@
+  <% if subject.errors.any? %>
+    <div class="alert alert-error">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <h2><%= pluralize(subject.errors.count, "error") %> prevented this operation:</h2>
+
+      <ul>
+      <% subject.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>

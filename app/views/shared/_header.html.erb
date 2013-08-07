@@ -1,0 +1,21 @@
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+		  <%= link_to "Meetmy Town Admin", root_path, class: 'brand' %>
+          <div class="nav-collapse collapse">
+    <ul id="top-menu" class="nav pull-right">
+      <li class="<%= true ? 'active' : '' %>"><%= link_to 'Welcome', root_path %></li>
+      <li class="<%= false ? 'active' : '' %>"><%= link_to 'FAQ', root_path %></li>
+      <li class="<%= false ? 'active' : '' %>"><%= link_to 'Terms', root_path %></li>
+      <li class="<%= false ? 'active' : '' %>"><%= link_to 'Privacy', root_path %></li>
+      <li class="<%= false ? 'active' : '' %>"><%= link_to 'Contact', root_path %></li>
+    </ul>
+	          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
