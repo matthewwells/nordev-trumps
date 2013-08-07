@@ -1,0 +1,65 @@
+<div class="well">
+	<%= form_for(@deck) do |f| %>
+	  <%= render(:partial => 'shared/errors', :locals => {:subject => @deck}) %>
+	
+	
+	  <div class="field">
+	    <%= f.label :name %>
+	    <%= f.text_field :name %>
+	  </div>
+	
+	  <div class="field">
+	    <%= f.label :num_attr %>
+	    <%= f.number_field :num_attr %>
+	  </div>
+	
+	  <div class="field">
+	    <%= f.label :attr1 %>
+	    <%= f.text_field :attr1 %>
+	  </div>
+	
+	  <div class="field">
+	    <%= f.label :attr2 %>
+	    <%= f.text_field :attr2 %>
+	  </div>
+	
+	  <div class="field">
+	    <%= f.label :attr3 %>
+	    <%= f.text_field :attr3 %>
+	  </div>
+	
+	  <div class="field">
+	    <%= f.label :attr4 %>
+	    <%= f.text_field :attr4 %>
+	  </div>
+	
+	  <div class="field">
+	    <%= f.label :attr5 %>
+	    <%= f.text_field :attr5 %>
+	  </div>
+	
+	  <div class="field">
+	    <%= f.label :attr6 %>
+	    <%= f.text_field :attr6 %>
+	  </div>
+	
+	  <div class="field">
+	    <%= f.label :attr7 %>
+	    <%= f.text_field :attr7 %>
+	  </div>
+	
+	  <div class="field">
+	    <%= f.label :attr8 %>
+	    <%= f.text_field :attr8 %>
+	  </div>
+	
+	  <div class="field">
+	    <%= f.label :attr9 %>
+	    <%= f.text_field :attr9 %>
+	  </div>
+	
+	  <div class="actions">
+	    <%= f.submit 'Save Deck', class: 'btn btn-primary' %>
+	  </div>
+	<% end %>
+</div>

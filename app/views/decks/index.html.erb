@@ -1,0 +1,69 @@
+<h2>Decks</h2>
+
+<table class="table table-striped">
+  <tr>
+
+    <th>Name</th>
+
+    <th>Num attr</th>
+
+    <th>Attr1</th>
+
+    <th>Attr2</th>
+
+    <th>Attr3</th>
+
+    <th>Attr4</th>
+
+    <th>Attr5</th>
+
+    <th>Attr6</th>
+
+    <th>Attr7</th>
+
+    <th>Attr8</th>
+
+    <th>Attr9</th>
+
+    <th></th>
+  </tr>
+
+<% @decks.each do |deck| %>
+  <tr>
+
+    <td><%= deck.name %></td>
+
+    <td><%= deck.num_attr %></td>
+
+    <td><%= deck.attr1 %></td>
+
+    <td><%= deck.attr2 %></td>
+
+    <td><%= deck.attr3 %></td>
+
+    <td><%= deck.attr4 %></td>
+
+    <td><%= deck.attr5 %></td>
+
+    <td><%= deck.attr6 %></td>
+
+    <td><%= deck.attr7 %></td>
+
+    <td><%= deck.attr8 %></td>
+
+    <td><%= deck.attr9 %></td>
+
+    <td>
+	    <%= split_options_dropdown link_to('View', deck, class: 'btn btn-mini') do %>
+            <li><%= link_to 'Edit', edit_deck_path(deck) %></li>
+            <li class='divider'></li>
+            <li><%= link_to 'Delete', deck, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+	    <% end %>
+	</td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Deck', new_deck_path, class: 'btn btn-primary' %>

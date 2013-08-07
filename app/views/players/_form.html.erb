@@ -1,0 +1,15 @@
+<div class="well">
+	<%= form_for(@player) do |f| %>
+	  <%= render(:partial => 'shared/errors', :locals => {:subject => @player}) %>
+	
+	
+	  <div class="field">
+	    <%= f.label :name %>
+	    <%= f.text_field :name %>
+	  </div>
+	
+	  <div class="actions">
+	    <%= f.submit 'Save Player', class: 'btn btn-primary' %>
+	  </div>
+	<% end %>
+</div>

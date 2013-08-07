@@ -1,11 +1,12 @@
 		    <ul id="left-menu" class="nav nav-pills nav-stacked">
-			    <li class="<%= true ? 'active' : '' %>"><%= link_to 'Login', root_path %></li>
-			    <li class="<%= false ? 'active' : '' %>"><%= link_to 'Register', root_path %></li>
-			    <li class="<%= false ? 'active' : '' %>"><%= link_to 'Reset Password', root_path %></li>
+			    <li class="<%= controller.class == PlayersController ? 'active' : '' %>"><%= link_to 'Players', players_path %></li>
+			    <li class="<%= controller.class == DecksController ? 'active' : '' %>"><%= link_to 'Decks', decks_path %></li>
+			    <li class="<%= controller.class == CardsController ? 'active' : '' %>"><%= link_to 'Cards', cards_path %></li>
 		    </ul>
           <div class="well sidebar-nav visible-desktop">
             <ul class="nav nav-list">
                 <li class="nav-header">Useful Links</li>
-			    <li><a href="http://www.rspb.org.uk" target="_new">The RSPB</a></li>
+			    <li><a href="http://www.meetup.com/Norfolk-Developers-NorDev/" target="_new">nor(DEV):</a></li>
+			    <li><a href="http://en.wikipedia.org/wiki/Top_Trumps" target="_new">Top Trumps</a></li>
            </ul>
 		 </div>

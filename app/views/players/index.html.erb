@@ -1,0 +1,29 @@
+<h2>Players</h2>
+
+<table class="table table-striped">
+  <tr>
+
+    <th>Name</th>
+
+    <th></th>
+  </tr>
+
+<% @players.each do |player| %>
+  <tr>
+
+    <td><%= player.name %></td>
+
+    <td>
+	    <%= split_options_dropdown link_to('View', player, class: 'btn btn-mini') do %>
+            <li><%= link_to 'Edit', edit_player_path(player) %></li>
+            <li class='divider'></li>
+            <li><%= link_to 'Delete', player, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+	    <% end %>
+	</td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Player', new_player_path, class: 'btn btn-primary' %>

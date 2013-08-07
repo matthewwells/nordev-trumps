@@ -1,4 +1,17 @@
 TownAdmin::Application.routes.draw do
+  resources :cards do
+    collection do
+      get :random
+    end
+  end
+
+
+  resources :decks
+
+
+  resources :players
+
+
   resources :users
 
 

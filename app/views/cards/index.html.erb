@@ -1,0 +1,65 @@
+<h2>Cards</h2>
+
+<table class="table table-striped">
+  <tr>
+
+    <th>Name</th>
+
+    <th>Val1</th>
+
+    <th>Val2</th>
+
+    <th>Val3</th>
+
+    <th>Val4</th>
+
+    <th>Val5</th>
+
+    <th>Val6</th>
+
+    <th>Val7</th>
+
+    <th>Val8</th>
+
+    <th>Val9</th>
+
+    <th></th>
+  </tr>
+
+<% @cards.each do |card| %>
+  <tr>
+
+    <td><%= card.name %></td>
+
+    <td><%= card.val1 %></td>
+
+    <td><%= card.val2 %></td>
+
+    <td><%= card.val3 %></td>
+
+    <td><%= card.val4 %></td>
+
+    <td><%= card.val5 %></td>
+
+    <td><%= card.val6 %></td>
+
+    <td><%= card.val7 %></td>
+
+    <td><%= card.val8 %></td>
+
+    <td><%= card.val9 %></td>
+
+    <td>
+	    <%= split_options_dropdown link_to('View', card, class: 'btn btn-mini') do %>
+            <li><%= link_to 'Edit', edit_card_path(card) %></li>
+            <li class='divider'></li>
+            <li><%= link_to 'Delete', card, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+	    <% end %>
+	</td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Card', new_card_path, class: 'btn btn-primary' %>

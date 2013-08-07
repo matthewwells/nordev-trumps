@@ -1,0 +1,64 @@
+<h2><%= @card.deck.name %> Card</h2>
+
+<p>
+  <b>Name:</b>
+  <%= @card.name %>
+</p>
+
+<p>
+  <b><%= @card.deck.attr1 %>:</b>
+  <%= @card.val1 %>
+</p>
+
+
+<p>
+  <b><%= @card.deck.attr2 %>:</b>
+  <%= @card.val2 %>
+</p>
+
+
+<p>
+  <b><%= @card.deck.attr3 %>:</b>
+  <%= @card.val3 %>
+</p>
+
+
+<p>
+  <b><%= @card.deck.attr4 %>:</b>
+  <%= @card.val4 %>
+</p>
+
+
+<p>
+  <b><%= @card.deck.attr5 %>:</b>
+  <%= @card.val5 %>
+</p>
+
+
+<p>
+  <b><%= @card.deck.attr6 %>:</b>
+  <%= @card.val6 %>
+</p>
+
+
+<p>
+  <b><%= @card.deck.attr7 %>:</b>
+  <%= @card.val7 %>
+</p>
+
+
+<p>
+  <b><%= @card.deck.attr8 %>:</b>
+  <%= @card.val8 %>
+</p>
+
+
+<p>
+  <b><%= @card.deck.attr9 %>:</b>
+  <%= @card.val9 %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_card_path(@card), class: 'btn btn-primary' %>
+<%= link_to 'Back', cards_path, class: 'btn' %>

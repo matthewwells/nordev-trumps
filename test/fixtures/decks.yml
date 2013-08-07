@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  num_attr: 1
+  attr1: MyString
+  attr2: MyString
+  attr3: MyString
+  attr4: MyString
+  attr5: MyString
+  attr6: MyString
+  attr7: MyString
+  attr8: MyString
+  attr9: MyString
+
+two:
+  name: MyString
+  num_attr: 1
+  attr1: MyString
+  attr2: MyString
+  attr3: MyString
+  attr4: MyString
+  attr5: MyString
+  attr6: MyString
+  attr7: MyString
+  attr8: MyString
+  attr9: MyString
